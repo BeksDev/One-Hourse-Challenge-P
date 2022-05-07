@@ -1,0 +1,306 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Radio Canada", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbareci {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+  font-size: 15px;
+  border-bottom: 1px solid black;
+  background-color: white;
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.navbareci img {
+  width: 50%;
+  padding: 0 0 0 30px;
+  cursor: pointer;
+}
+.navbareci ul {
+  display: flex;
+  padding: 50px;
+  margin: auto;
+}
+.navbareci li {
+  padding: 30px;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 22px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.navbareci li:hover {
+  color: rgb(255, 82, 82);
+}
+.navbareci .mobile-menu {
+  display: none;
+}
+@media screen and (max-width: 850px) {
+  .navbareci .mylinks {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-out;
+    opacity: 0;
+  }
+  .navbareci .mylinks.activate {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+  .navbareci .fa-solid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbareci .mobile-menu {
+    display: block;
+    font-size: 50px;
+    padding: 50px;
+    color: rgb(255, 82, 82);
+    z-index: 1;
+  }
+  .navbareci .mobile-menu i {
+    cursor: pointer;
+  }
+}
+
+.active {
+  border-bottom: 5px solid rgb(255, 82, 82);
+}
+
+main {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main video {
+  position: absolute;
+  z-index: -1;
+}
+main .contact-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+main .contact-button h3 {
+  padding: 10px;
+  font-size: 22px;
+}
+main .contact-button button {
+  border: none;
+  background-color: rgb(255, 82, 82);
+  color: white;
+  font-size: 33px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  width: 150px;
+  border-radius: 10px;
+}
+main .contact-button button:hover {
+  color: black;
+}
+main .contact-button h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .contact-button .fa-phone {
+  padding: 10px;
+  font-size: 30px;
+  color: rgb(255, 82, 82);
+}
+@media screen and (max-width: 1280px) {
+  main video {
+    width: 100%;
+    top: 50px;
+  }
+  main .desc-contact {
+    margin-top: 300px;
+  }
+  main .desc-contact h1 {
+    font-size: 22px;
+  }
+  main .contact-button {
+    flex-direction: column;
+  }
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px;
+}
+.cards .card {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 5px 8px 10px rgba(228, 225, 225, 0.5882352941);
+  transform: scale(0.9);
+  transition: 0.5s ease;
+  cursor: pointer;
+  border-radius: 30px;
+  height: 550px;
+}
+.cards .card img {
+  width: 80%;
+}
+.cards .card:hover {
+  transform: scale(1);
+}
+.cards .card h1 {
+  padding: 10px;
+}
+.cards .card p {
+  padding: 0 20px;
+  font-size: 18px;
+}
+.cards .card button {
+  margin-top: 40px;
+  border: none;
+  background-color: rgb(255, 82, 82);
+  color: white;
+  font-size: 33px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  width: 150px;
+  border-radius: 10px;
+}
+.cards .card button:hover {
+  color: black;
+}
+
+@media screen and (max-width: 1280px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+}
+.about img {
+  width: 50vw;
+}
+.about .about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about .about-content h1 {
+  padding: 30px 30px 1px 30px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: rgb(255, 82, 82);
+}
+.about .about-content p {
+  padding: 30px 30px 1px 30px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1280px) {
+  .about {
+    flex-direction: column;
+  }
+  .about img {
+    width: 100%;
+  }
+  .about .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid black;
+}
+footer .logo-cont {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+}
+footer .copyright-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid black;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+footer .copyright-container:hover {
+  background-color: black;
+  color: white;
+}
+footer .copyright-container p {
+  font-size: 28px;
+  padding: 50px;
+  font-weight: bolder;
+}
+footer .socialcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 70px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+  footer {
+    flex-direction: column;
+  }
+  footer .socialcontainer {
+    border: 1px solid black;
+    padding: 100px;
+    transition: 0.5s ease;
+  }
+  footer .socialcontainer:hover {
+    background-color: black;
+    color: white;
+  }
+  footer .socialcontainer i {
+    padding: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */

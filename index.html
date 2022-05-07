@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <title>One Hours Challenge</title>
+</head>
+<body>
+
+    <nav class="navbareci">
+        <div>
+            <img href="/" src="./Logo.png" alt="navbar icon">
+        </div>
+        <div>
+            <ul class="mylinks">
+                <li class="active"> <a href="#home"></a>Home</li>
+                <li><a href="#services"></a>Services</li>
+                <li><a href="#about"></a>About</li>
+            </ul>
+        </div>
+        <div class="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <main id="home">
+        <video src="./720p.mp4" autoplay></video>
+
+        <div class="desc-contact">
+            <h1 >HELLO THIS IS DESIGN WEBSITE</h1>
+        </div>
+        <div class="contact-button">
+            <h3><i class="fa-solid fa-phone"></i> 598441323</h3>
+            <button>CALL ME </button>
+        </div>
+    </main>
+
+
+
+    <div class="cards" id="services">
+        <div class="card">
+            <img src="./logo (1).png" alt="react">
+            <h1>FRONT-END</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quam ut veniam quos?</p>
+            <button>OPEN</button>
+        </div>
+        <div class="card">
+            <img src="./wordpress-png-icon.png" alt="react">
+            <h1>WORDPRESS</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quam ut veniam quos?</p>
+            <button>OPEN</button>
+        </div>
+        <div class="card">
+            <img src="./13-134881_social-media-icons-black-instagram-daily-dot-logo.png" alt="react">
+            <h1>SOC-MEDIA</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quam ut veniam quos?</p>
+            <button>OPEN</button>
+        </div>
+    </div>
+
+
+
+    <div class="about" id="about">
+        <div class="left-side-picture">
+            <img src="./What-makes-a-great-programmer-banner-1536x1024-1.jpeg" alt="aboutpic">
+        </div>
+        <div class="about-content">
+            <h1>ABOUT</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere, hic odio a aspernatur veniam suscipit, aliquam quasi ipsam repellat eligendi saepe cum distinctio delectus obcaecati dolorem architecto qui, commodi exercitationem. Culpa ad quasi, eius perspiciatis, odit, pariatur expedita tempore dolor totam perferendis dicta? Aut non nam quasi tempore praesentium velit obcaecati excepturi ab. Hic suscipit veritatis dolorem minima nulla quisquam magni ex error eum, deleniti nostrum rerum alias tenetur facilis unde quibusdam voluptas exercitationem adipisci facere illo fugiat assumenda distinctio. Ipsum voluptates doloremque eos mollitia dolor repellendus! Maxime dolores iste eveniet sequi. Reiciendis doloremque voluptates dolorum id! Eum vel nesciunt eligendi temporibus minima. Unde molestiae sit laudantium maxime minima tenetur blanditiis earum ducimus repellat voluptatem eum dolores quam asperiores nesciunt vel doloribus maiores voluptatibus reiciendis deserunt velit ipsam officia, amet esse mollitia! Corrupti, officiis vitae eveniet libero quis sapiente sint mollitia enim omnis ullam tenetur cum voluptatibus rerum expedita?</p>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="logo-corytight-container">
+            <div class="logo-cont">
+                <img src="./Logo.png" alt="logo">
+            </div>
+            <div class="copyright-container">
+                <p>ALL RIGHT RESERVED BY BEKS 2022</p>
+            </div>
+        </div>
+
+
+        <div class="socialcontainer">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </footer>
+    
+
+
+    <script>
+        var menu = document.querySelectorAll('ul')[0];
+        
+
+        menu.addEventListener('click', myFucntion);
+
+
+        function myFucntion(e){
+            var elem = document.querySelector(".active");
+            if(elem !=null){
+                elem.classList.remove('active');
+            }
+            e.target.className = "active";
+        };
+    </script>
+
+
+<script>
+    $(".fa-bars").click(function(){
+        $(this).toggleClass("fa-xmark");
+        $('.mylinks').toggleClass("activate");
+    })
+</script>
+
+<script>
+    gsap.from('#home', {opacity:0, duration:1.5, y:-50, ease:'Power2.easeInOut'})
+    gsap.from('#home h1', {opacity:0, duration:1.5, y:-150, ease:'Power2.easeInOut'})
+    gsap.from('#home button', {opacity:0, duration:1.5, x:150, ease:'Power2.easeInOut'})
+    gsap.from('#home h3', {opacity:0, duration:1.5, x:-150, ease:'Power2.easeInOut'})
+    gsap.from('.navbareci', {opacity:0, duration:0.5, y:-50})
+</script>
+
+</body>
+</html>
